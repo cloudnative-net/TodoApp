@@ -17,13 +17,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.301
-    - name: Change directory
-      run: |
-        cd src  
-        ls -l
     - name: Install dependencies
       run: |
-        pwd
+        cd src
         dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
