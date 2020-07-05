@@ -20,9 +20,11 @@ jobs:
     - name: Change directory
       run: |
         cd src  
-        pwd
+        ls -l
     - name: Install dependencies
-      run: dotnet restore
+      run: |
+        pwd
+        dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
