@@ -19,13 +19,6 @@ jobs:
         dotnet-version: 3.1.301
     - name: Install dependencies
       run: |
-        cd src
-        dotnet restore
-    - name: Build
-      run: |
-        cd src
-        dotnet build --configuration Release --no-restore
-    - name: Test
-      run: |
-        cd src
-        dotnet test --no-restore --verbosity normal
+        cd build
+        bash build.sh
+
